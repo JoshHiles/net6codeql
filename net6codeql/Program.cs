@@ -6,7 +6,7 @@ namespace net6codeql
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World! asda");
         }
     }
 }
