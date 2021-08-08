@@ -48,8 +48,11 @@ jobs:
     #    and modify them (or add more) to build your code if your project
     #    uses a compiled language
 
+    - uses: actions/setup-dotnet@v1
+        with:
+        dotnet-version: '6.0.x'
+        include-prerelease: true
     - run: |
-        dotnet restore
         dotnet build
 
     - name: Perform CodeQL Analysis
