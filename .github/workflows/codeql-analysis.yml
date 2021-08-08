@@ -53,7 +53,8 @@ jobs:
           dotnet-version: "6.0.x"
           include-prerelease: true
       - run: |
-          dotnet build
+          dotnet restore
+          dotnet build --no-restore
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
@@ -62,4 +63,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: Artifact
-          path: .
+          path: ./
